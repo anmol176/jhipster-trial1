@@ -1,0 +1,115 @@
+entity Region {
+regionName String minlength(10) maxlength(50) unique
+}
+entity Country {
+countryName String required unique minlength(5) maxlength(255)
+isoCode String required unique minlength(2) maxlength(2)
+}
+// an ignored comment
+/** not an ignored comment */
+entity Location {
+streetAddress String required
+postalCode String required
+city String required
+stateProvince String required
+locationDetail String required
+}
+entity CompanyGroup {
+id Long required unique
+gCIF String required minlength(10) maxlength(10)
+groupName String required
+}
+entity CompanyEntity{
+id Long required unique
+cif String required minlength(10) maxlength(10)
+legalName String required
+}
+entity CompanyEntityAccount{
+id Long required
+nickName String required minlength(20) maxlength(200)
+accountNo String required
+}
+/**
+* Permission specific entities
+*/
+enum ResourceType {
+SERVICE, PYMT, ENQUIRY, EFX
+}
+enum ProductDomain {
+CASHMGMT, FXMGMT, PAYMENT, TRADE
+}
+entity Resources {
+id Long required unique
+domain ProductDomain required
+type ResourceType required
+name String required unique minlength(10) maxlength(25)
+description String minlength(5) maxlength(255)
+}
+enum Action {
+SAVE, SUBMIT, DRAFT, VERIFY, DELETE, APPROVE, REJECT, VIEW
+}
+entity ResourceAction(resources_actions) {
+id Long required unique
+action Action required
+actionDesciption String required minlength(5) maxlength(50)
+}
+entity ResourceActionGroup(resources_actions_groups) {
+id Long required unique
+resourceGroupName String required minlength(10) maxlength(25)
+}
+enum Language {
+CHINESE, ENGLISH, MALAY
+}
+entity CompanyUser {
+legalName String required maxlength(255)
+email String required maxlength(125)
+phoneNumber String required maxlength(32)
+preferedLanguage Language required
+}
+entity CompanyUserGroup {
+id Long required unique
+userGroupName String required maxlength(25) minlength(5)
+}
+entity ServiceEnrollment {
+id Long required unique
+serviceName ServiceEnum required
+uen String required
+uploadServiceRequestDocument ImageBlob
+serviceDescription String minlength(20) maxlength(255)
+status Status
+}
+enum Status {
+APPROVED, DRAFT, SUBMITTED, REJECTED
+}
+enum ServiceEnum {
+BIZ_SMART, TT_AMMEND, ADDRESS_CHANGE
+}
+relationship OneToOne {
+Country{region(regionName)} to Region
+CompanyEntity{location(locationDetail) required} to Location
+CompanyGroup{ location(locationDetail) required} to Location
+}
+relationship ManyToOne {
+Location{country(isoCode) required} to Country
+CompanyEntity{companyGroup(groupName) required} to CompanyGroup
+CompanyEntityAccount{ownerEntity(legalName) required} to CompanyEntity 
+CompanyUser{companyGroup(groupName) required} to CompanyGroup
+CompanyUserGroup{companyGroup(groupName) required} to CompanyGroup
+ResourceAction{resourceGroupName(name) required} to Resources
+ResourceActionGroup{resourceActions(actionDesciption) required} to ResourceAction
+}
+relationship ManyToMany {
+CompanyUser{assignedCompanyUserGroups(userGroupName) required} to CompanyUserGroup{assignedUsers(legalName)}
+CompanyUserGroup{assignedResourceGroups(resourceGroupName) required} to ResourceActionGroup{assignedCompanyUserGroups(userGroupName)}
+CompanyUser{assignedAccounts(nickName) required} to CompanyEntityAccount{assignedUsers(legalName)}
+}
+// Set pagination options
+paginate CompanyGroup, CompanyEntity, CompanyUser with infinite-scroll
+filter CompanyEntity, CompanyGroup, CompanyUser, Resources
+paginate CompanyEntityAccount,Resources with pagination
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+// angularSuffix * with mySuffix
