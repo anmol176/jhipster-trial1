@@ -47,6 +47,24 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.User.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Authority.class.getName());
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.mycompany.myapp.domain.Region.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Country.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Location.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.CompanyGroup.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.CompanyEntity.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.CompanyEntityAccount.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.CompanyEntityAccount.class.getName() + ".assignedUsers");
+            createCache(cm, com.mycompany.myapp.domain.Resources.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.ResourceAction.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.ResourceActionGroup.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.ResourceActionGroup.class.getName() + ".assignedCompanyUserGroups");
+            createCache(cm, com.mycompany.myapp.domain.CompanyUser.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.CompanyUser.class.getName() + ".assignedCompanyUserGroups");
+            createCache(cm, com.mycompany.myapp.domain.CompanyUser.class.getName() + ".assignedAccounts");
+            createCache(cm, com.mycompany.myapp.domain.CompanyUserGroup.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.CompanyUserGroup.class.getName() + ".assignedResourceGroups");
+            createCache(cm, com.mycompany.myapp.domain.CompanyUserGroup.class.getName() + ".assignedUsers");
+            createCache(cm, com.mycompany.myapp.domain.ServiceEnrollment.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

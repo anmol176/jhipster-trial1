@@ -1,0 +1,41 @@
+{
+  "name": "ResourceActionGroup",
+  "fields": [
+    {
+      "fieldName": "resourceGroupName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "10",
+      "fieldValidateRulesMaxlength": "25"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "resourceAction",
+      "otherEntityRelationshipName": "resourceActionGroup",
+      "relationshipValidateRules": "required",
+      "relationshipName": "resourceActions",
+      "otherEntityField": "actionDesciption"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "companyUserGroup",
+      "otherEntityRelationshipName": "assignedResourceGroups",
+      "relationshipName": "assignedCompanyUserGroups",
+      "otherEntityField": "userGroupName",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20201211111508",
+  "entityTableName": "resources_actions_groups",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

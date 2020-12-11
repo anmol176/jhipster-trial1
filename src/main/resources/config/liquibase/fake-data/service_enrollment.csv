@@ -1,0 +1,11 @@
+id;service_name;uen;upload_service_request_document;upload_service_request_document_content_type;service_description;status
+1;ADDRESS_CHANGE;withdrawal;../fake-data/blob/hipster.png;image/png;methodologies synthesizing;REJECTED
+2;BIZ_SMART;Credit Card Account Fresh;../fake-data/blob/hipster.png;image/png;Incredible Analyst Bedfordshire;REJECTED
+3;ADDRESS_CHANGE;Colombia;../fake-data/blob/hipster.png;image/png;withdrawal LeadXXXXX;APPROVED
+4;BIZ_SMART;payment;../fake-data/blob/hipster.png;image/png;optical SausagesXXXX;DRAFT
+5;TT_AMMEND;Bahrain;../fake-data/blob/hipster.png;image/png;invoice generateXXXX;DRAFT
+6;ADDRESS_CHANGE;schemas;../fake-data/blob/hipster.png;image/png;VatuXXXXXXXXXXXXXXXX;DRAFT
+7;BIZ_SMART;Kwanza;../fake-data/blob/hipster.png;image/png;exuding Generic Metal Pants Buckinghamshire;APPROVED
+8;TT_AMMEND;Usability visionary Quetzal;../fake-data/blob/hipster.png;image/png;Faroe Islands CSSXXX;APPROVED
+9;TT_AMMEND;Frozen;../fake-data/blob/hipster.png;image/png;SSLXXXXXXXXXXXXXXXXX;SUBMITTED
+10;BIZ_SMART;Cambodia SSL monitor;../fake-data/blob/hipster.png;image/png;Ergonomic Incredible Fresh Towels Loop;SUBMITTED

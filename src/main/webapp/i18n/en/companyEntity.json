@@ -1,0 +1,25 @@
+{
+  "trial1App": {
+    "companyEntity": {
+      "home": {
+        "title": "Company Entities",
+        "createLabel": "Create a new Company Entity",
+        "createOrEditLabel": "Create or edit a Company Entity",
+        "notFound": "No Company Entities found"
+      },
+      "created": "A new Company Entity is created with identifier {{ param }}",
+      "updated": "A Company Entity is updated with identifier {{ param }}",
+      "deleted": "A Company Entity is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Company Entity {{ id }}?"
+      },
+      "detail": {
+        "title": "Company Entity"
+      },
+      "cif": "Cif",
+      "legalName": "Legal Name",
+      "location": "Location",
+      "companyGroup": "Company Group"
+    }
+  }
+}

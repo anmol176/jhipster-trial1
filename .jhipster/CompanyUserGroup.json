@@ -1,0 +1,50 @@
+{
+  "name": "CompanyUserGroup",
+  "fields": [
+    {
+      "fieldName": "userGroupName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength", "minlength"],
+      "fieldValidateRulesMaxlength": "25",
+      "fieldValidateRulesMinlength": "5"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "companyGroup",
+      "otherEntityRelationshipName": "companyUserGroup",
+      "relationshipValidateRules": "required",
+      "relationshipName": "companyGroup",
+      "otherEntityField": "groupName"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "resourceActionGroup",
+      "otherEntityRelationshipName": "assignedCompanyUserGroups",
+      "relationshipValidateRules": "required",
+      "relationshipName": "assignedResourceGroups",
+      "otherEntityField": "resourceGroupName",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "companyUser",
+      "otherEntityRelationshipName": "assignedCompanyUserGroups",
+      "relationshipName": "assignedUsers",
+      "otherEntityField": "legalName",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20201211111708",
+  "entityTableName": "company_user_group",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "CompanyGroup",
+  "fields": [
+    {
+      "fieldName": "gCIF",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "10",
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "groupName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "companyGroup",
+      "relationshipValidateRules": "required",
+      "relationshipName": "location",
+      "otherEntityField": "locationDetail",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20201211111008",
+  "entityTableName": "company_group",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,25 @@
+{
+  "trial1App": {
+    "companyUserGroup": {
+      "home": {
+        "title": "Company User Groups",
+        "createLabel": "Create a new Company User Group",
+        "createOrEditLabel": "Create or edit a Company User Group",
+        "notFound": "No Company User Groups found"
+      },
+      "created": "A new Company User Group is created with identifier {{ param }}",
+      "updated": "A Company User Group is updated with identifier {{ param }}",
+      "deleted": "A Company User Group is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Company User Group {{ id }}?"
+      },
+      "detail": {
+        "title": "Company User Group"
+      },
+      "userGroupName": "User Group Name",
+      "companyGroup": "Company Group",
+      "assignedResourceGroups": "Assigned Resource Groups",
+      "assignedUsers": "Assigned Users"
+    }
+  }
+}

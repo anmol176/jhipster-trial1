@@ -1,0 +1,11 @@
+{
+  "trial1App": {
+    "ProductDomain": {
+      "null": "",
+      "CASHMGMT": "CASHMGMT",
+      "FXMGMT": "FXMGMT",
+      "PAYMENT": "PAYMENT",
+      "TRADE": "TRADE"
+    }
+  }
+}

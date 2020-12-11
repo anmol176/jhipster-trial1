@@ -1,0 +1,47 @@
+{
+  "name": "CompanyEntity",
+  "fields": [
+    {
+      "fieldName": "cif",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "10",
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "legalName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "companyEntity",
+      "relationshipValidateRules": "required",
+      "relationshipName": "location",
+      "otherEntityField": "locationDetail",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "companyGroup",
+      "otherEntityRelationshipName": "companyEntity",
+      "relationshipValidateRules": "required",
+      "relationshipName": "companyGroup",
+      "otherEntityField": "groupName"
+    }
+  ],
+  "changelogDate": "20201211111108",
+  "entityTableName": "company_entity",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

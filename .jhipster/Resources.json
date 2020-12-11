@@ -1,0 +1,43 @@
+{
+  "name": "Resources",
+  "fields": [
+    {
+      "fieldName": "domain",
+      "fieldType": "ProductDomain",
+      "fieldValues": "CASHMGMT,FXMGMT,PAYMENT,TRADE",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "ResourceType",
+      "fieldValues": "SERVICE,PYMT,ENQUIRY,EFX",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "10",
+      "fieldValidateRulesMaxlength": "25"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "5",
+      "fieldValidateRulesMaxlength": "255"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201211111308",
+  "entityTableName": "resources",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

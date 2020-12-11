@@ -1,0 +1,15 @@
+{
+  "trial1App": {
+    "Action": {
+      "null": "",
+      "SAVE": "SAVE",
+      "SUBMIT": "SUBMIT",
+      "DRAFT": "DRAFT",
+      "VERIFY": "VERIFY",
+      "DELETE": "DELETE",
+      "APPROVE": "APPROVE",
+      "REJECT": "REJECT",
+      "VIEW": "VIEW"
+    }
+  }
+}

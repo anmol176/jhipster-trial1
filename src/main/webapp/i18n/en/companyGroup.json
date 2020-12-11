@@ -1,0 +1,24 @@
+{
+  "trial1App": {
+    "companyGroup": {
+      "home": {
+        "title": "Company Groups",
+        "createLabel": "Create a new Company Group",
+        "createOrEditLabel": "Create or edit a Company Group",
+        "notFound": "No Company Groups found"
+      },
+      "created": "A new Company Group is created with identifier {{ param }}",
+      "updated": "A Company Group is updated with identifier {{ param }}",
+      "deleted": "A Company Group is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Company Group {{ id }}?"
+      },
+      "detail": {
+        "title": "Company Group"
+      },
+      "gCIF": "G CIF",
+      "groupName": "Group Name",
+      "location": "Location"
+    }
+  }
+}

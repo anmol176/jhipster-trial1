@@ -1,0 +1,68 @@
+{
+  "name": "CompanyUser",
+  "fields": [
+    {
+      "fieldName": "legalName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "125"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "32"
+    },
+    {
+      "fieldName": "preferedLanguage",
+      "fieldType": "Language",
+      "fieldValues": "CHINESE,ENGLISH,MALAY",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "companyGroup",
+      "otherEntityRelationshipName": "companyUser",
+      "relationshipValidateRules": "required",
+      "relationshipName": "companyGroup",
+      "otherEntityField": "groupName"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "companyUserGroup",
+      "otherEntityRelationshipName": "assignedUsers",
+      "relationshipValidateRules": "required",
+      "relationshipName": "assignedCompanyUserGroups",
+      "otherEntityField": "userGroupName",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "companyEntityAccount",
+      "otherEntityRelationshipName": "assignedUsers",
+      "relationshipValidateRules": "required",
+      "relationshipName": "assignedAccounts",
+      "otherEntityField": "nickName",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20201211111608",
+  "entityTableName": "company_user",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

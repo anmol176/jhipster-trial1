@@ -1,0 +1,24 @@
+{
+  "name": "Region",
+  "fields": [
+    {
+      "fieldName": "regionName",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength", "unique"],
+      "fieldValidateRulesMinlength": "10",
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201211110708",
+  "entityTableName": "region",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

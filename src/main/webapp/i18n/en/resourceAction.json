@@ -1,0 +1,24 @@
+{
+  "trial1App": {
+    "resourceAction": {
+      "home": {
+        "title": "Resource Actions",
+        "createLabel": "Create a new Resource Action",
+        "createOrEditLabel": "Create or edit a Resource Action",
+        "notFound": "No Resource Actions found"
+      },
+      "created": "A new Resource Action is created with identifier {{ param }}",
+      "updated": "A Resource Action is updated with identifier {{ param }}",
+      "deleted": "A Resource Action is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Resource Action {{ id }}?"
+      },
+      "detail": {
+        "title": "Resource Action"
+      },
+      "action": "Action",
+      "actionDesciption": "Action Desciption",
+      "resourceGroupName": "Resource Group Name"
+    }
+  }
+}

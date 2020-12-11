@@ -1,0 +1,11 @@
+{
+  "trial1App": {
+    "Status": {
+      "null": "",
+      "APPROVED": "APPROVED",
+      "DRAFT": "DRAFT",
+      "SUBMITTED": "SUBMITTED",
+      "REJECTED": "REJECTED"
+    }
+  }
+}

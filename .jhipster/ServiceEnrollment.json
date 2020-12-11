@@ -1,0 +1,45 @@
+{
+  "name": "ServiceEnrollment",
+  "fields": [
+    {
+      "fieldName": "serviceName",
+      "fieldType": "ServiceEnum",
+      "fieldValues": "BIZ_SMART,TT_AMMEND,ADDRESS_CHANGE",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "uen",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "uploadServiceRequestDocument",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "serviceDescription",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "20",
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "APPROVED,DRAFT,SUBMITTED,REJECTED"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201211111808",
+  "entityTableName": "service_enrollment",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

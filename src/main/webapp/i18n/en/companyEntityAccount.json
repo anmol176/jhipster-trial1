@@ -1,0 +1,25 @@
+{
+  "trial1App": {
+    "companyEntityAccount": {
+      "home": {
+        "title": "Company Entity Accounts",
+        "createLabel": "Create a new Company Entity Account",
+        "createOrEditLabel": "Create or edit a Company Entity Account",
+        "notFound": "No Company Entity Accounts found"
+      },
+      "created": "A new Company Entity Account is created with identifier {{ param }}",
+      "updated": "A Company Entity Account is updated with identifier {{ param }}",
+      "deleted": "A Company Entity Account is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Company Entity Account {{ id }}?"
+      },
+      "detail": {
+        "title": "Company Entity Account"
+      },
+      "nickName": "Nick Name",
+      "accountNo": "Account No",
+      "ownerEntity": "Owner Entity",
+      "assignedUsers": "Assigned Users"
+    }
+  }
+}

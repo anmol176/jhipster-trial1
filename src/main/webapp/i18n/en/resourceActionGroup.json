@@ -1,0 +1,24 @@
+{
+  "trial1App": {
+    "resourceActionGroup": {
+      "home": {
+        "title": "Resource Action Groups",
+        "createLabel": "Create a new Resource Action Group",
+        "createOrEditLabel": "Create or edit a Resource Action Group",
+        "notFound": "No Resource Action Groups found"
+      },
+      "created": "A new Resource Action Group is created with identifier {{ param }}",
+      "updated": "A Resource Action Group is updated with identifier {{ param }}",
+      "deleted": "A Resource Action Group is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Resource Action Group {{ id }}?"
+      },
+      "detail": {
+        "title": "Resource Action Group"
+      },
+      "resourceGroupName": "Resource Group Name",
+      "resourceActions": "Resource Actions",
+      "assignedCompanyUserGroups": "Assigned Company User Groups"
+    }
+  }
+}

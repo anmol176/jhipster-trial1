@@ -1,0 +1,26 @@
+{
+  "trial1App": {
+    "serviceEnrollment": {
+      "home": {
+        "title": "Service Enrollments",
+        "createLabel": "Create a new Service Enrollment",
+        "createOrEditLabel": "Create or edit a Service Enrollment",
+        "notFound": "No Service Enrollments found"
+      },
+      "created": "A new Service Enrollment is created with identifier {{ param }}",
+      "updated": "A Service Enrollment is updated with identifier {{ param }}",
+      "deleted": "A Service Enrollment is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Service Enrollment {{ id }}?"
+      },
+      "detail": {
+        "title": "Service Enrollment"
+      },
+      "serviceName": "Service Name",
+      "uen": "Uen",
+      "uploadServiceRequestDocument": "Upload Service Request Document",
+      "serviceDescription": "Service Description",
+      "status": "Status"
+    }
+  }
+}

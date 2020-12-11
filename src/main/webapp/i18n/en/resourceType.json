@@ -1,0 +1,11 @@
+{
+  "trial1App": {
+    "ResourceType": {
+      "null": "",
+      "SERVICE": "SERVICE",
+      "PYMT": "PYMT",
+      "ENQUIRY": "ENQUIRY",
+      "EFX": "EFX"
+    }
+  }
+}

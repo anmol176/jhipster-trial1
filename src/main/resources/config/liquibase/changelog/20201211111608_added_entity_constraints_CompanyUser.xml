@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity CompanyUser.
+    -->
+    <changeSet id="20201211111608-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="company_group_id"
+                                 baseTableName="company_user"
+                                 constraintName="fk_company_user_company_group_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company_group"/>
+
+        <addForeignKeyConstraint baseColumnNames="company_user_id"
+                                 baseTableName="company_user_assigned_company_user_groups"
+                                 constraintName="fk_company_user_assigned_company_user_groups_company_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="assigned_company_user_groups_id"
+                                 baseTableName="company_user_assigned_company_user_groups"
+                                 constraintName="company_user_assigned_company_u_assigned_company_user_groups_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company_user_group"/>
+        
+        <addForeignKeyConstraint baseColumnNames="company_user_id"
+                                 baseTableName="company_user_assigned_accounts"
+                                 constraintName="fk_company_user_assigned_accounts_company_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="assigned_accounts_id"
+                                 baseTableName="company_user_assigned_accounts"
+                                 constraintName="fk_company_user_assigned_accounts_assigned_accounts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company_entity_account"/>
+        
+    </changeSet>
+</databaseChangeLog>

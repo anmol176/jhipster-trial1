@@ -1,0 +1,46 @@
+{
+  "name": "CompanyEntityAccount",
+  "fields": [
+    {
+      "fieldName": "nickName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "20",
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "accountNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "companyEntity",
+      "otherEntityRelationshipName": "companyEntityAccount",
+      "relationshipValidateRules": "required",
+      "relationshipName": "ownerEntity",
+      "otherEntityField": "legalName"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "companyUser",
+      "otherEntityRelationshipName": "assignedAccounts",
+      "relationshipName": "assignedUsers",
+      "otherEntityField": "legalName",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20201211111208",
+  "entityTableName": "company_entity_account",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

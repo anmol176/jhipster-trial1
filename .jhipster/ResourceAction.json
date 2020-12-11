@@ -1,0 +1,39 @@
+{
+  "name": "ResourceAction",
+  "fields": [
+    {
+      "fieldName": "action",
+      "fieldType": "Action",
+      "fieldValues": "SAVE,SUBMIT,DRAFT,VERIFY,DELETE,APPROVE,REJECT,VIEW",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "actionDesciption",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "5",
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "resources",
+      "otherEntityRelationshipName": "resourceAction",
+      "relationshipValidateRules": "required",
+      "relationshipName": "resourceGroupName",
+      "otherEntityField": "name"
+    }
+  ],
+  "changelogDate": "20201211111408",
+  "entityTableName": "resources_actions",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
